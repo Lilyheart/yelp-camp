@@ -1,7 +1,7 @@
 {
   "name": "v1",
   "version": "1.0.0",
-  "description": "YelpCamp v1",
+  "description": "YelpCamp v6",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,9 +9,13 @@
   "author": "Lily Romano",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.1",
+    "body-parser": "^1.15.2",
     "ejs": "^2.4.2",
     "express": "^4.14.0",
-    "mongoose": "^4.5.1"
+    "express-session": "^1.13.0",
+    "mongoose": "^4.5.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0"
   }
 }

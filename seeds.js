@@ -1,6 +1,7 @@
-var mongoose = require("mongoose");
-var Campground = require("./models/campground");
-var Comment    = require("./models/comment");
+var mongoose   = require("mongoose"),
+    Campground = require("./models/campground"),
+    Comment    = require("./models/comment"),
+    User       = require("./models/user");
 
 var campgroundData = [
     {  	"name" : "Salmons Creek",  
@@ -89,6 +90,14 @@ function seedDB(){
             });
         }
     });
+    User.remove({}, function(err, response){
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("User database cleared")
+        }
+    });
+
 }
 
 module.exports = seedDB;
