@@ -22,35 +22,35 @@ var campgroundData = [
     }
 ];
 
-var commentData1 = [
-    {  	"text": "This place is great",
-        "author": "Homer"
-    },
-    {  	"text": ". . .",
-        "author": "Maggie"
-    },
-    {  	"text": "*plays sax*",
-        "author": "Lisa"
-    },
-    {  	"text": "Cowabunga",
-        "author": "Bart"
-    }
-];
+// var commentData1 = [
+//     {  	"text": "This place is great",
+//         "author": "Homer"
+//     },
+//     {  	"text": ". . .",
+//         "author": "Maggie"
+//     },
+//     {  	"text": "*plays sax*",
+//         "author": "Lisa"
+//     },
+//     {  	"text": "Cowabunga",
+//         "author": "Bart"
+//     }
+// ];
 
-var commentData2 = [
-    {  	"text": "Fish for dinner!",
-        "author": "Marge"
-    },
-    {  	"text": "*falls on rock*",
-        "author": "Grandpa Simpson"
-    },
-    {  	"text": "I found a bug!",
-        "author": "Ralph"
-    },
-    {  	"text": "Too much water!",
-        "author": "Apu"
-    }
-];
+// var commentData2 = [
+//     {  	"text": "Fish for dinner!",
+//         "author": "Marge"
+//     },
+//     {  	"text": "*falls on rock*",
+//         "author": "Grandpa Simpson"
+//     },
+//     {  	"text": "I found a bug!",
+//         "author": "Ralph"
+//     },
+//     {  	"text": "Too much water!",
+//         "author": "Apu"
+//     }
+// ];
 
 function seedDB(){
     Campground.remove({}, function(err, response){
@@ -67,21 +67,21 @@ function seedDB(){
                             if (err) {
                                 console.log(err);
                             } else {
-                                Comment.create(commentData1[thisArg], function(err, comment){
-                                    if (err) {
-                                        console.log(err);
-                                    } else {
-                                        campgroundResponse.comments.push(comment);
-                                    }
-                                });
-                                Comment.create(commentData2[thisArg], function(err, comment2){
-                                    if (err) {
-                                        console.log(err);
-                                    } else {
-                                        campgroundResponse.comments.push(comment2);
-                                        campgroundResponse.save();
-                                    }
-                                });
+                                // Comment.create(commentData1[thisArg], function(err, comment){
+                                //     if (err) {
+                                //         console.log(err);
+                                //     } else {
+                                //         campgroundResponse.comments.push(comment);
+                                //     }
+                                // });
+                                // Comment.create(commentData2[thisArg], function(err, comment2){
+                                //     if (err) {
+                                //         console.log(err);
+                                //     } else {
+                                //         campgroundResponse.comments.push(comment2);
+                                //         campgroundResponse.save();
+                                //     }
+                                // });
                             }
                         });
                         console.log("Added campground");

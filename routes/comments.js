@@ -20,20 +20,23 @@ var Campground = require("../models/campground"),
     
     router.post("/", isLoggedIn, function(req,res){
         Campground.findById(req.params.id, function(err, campground){
-           if (err) {
+            if (err) {
                 console.log(err);
                 res.redirect("/campgrounds");
-           } else {
+            } else {
                 Comment.create(req.body.comment, function(err, comment){
                     if (err) {
                         console.log(err);
                     } else {
+                        comment.author.id = req.user._id;
+                        comment.author.username = req.user.username;
+                        comment.save();
                         campground.comments.push(comment);
                         campground.save();
                         res.redirect("/campgrounds/" + campground._id);
                     }
                 });
-           }
+            }
         });
     });
     

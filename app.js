@@ -2,7 +2,7 @@
 // Setup!  //
 //=========//
 
-var refreshSeeds = false;
+var reseedDatabase = false;
 
 var express               = require("express"),
     bodyParser            = require("body-parser"),
@@ -32,7 +32,7 @@ var Campground            = require("./models/campground"),
 // Passport Setups
 
     app.use(require("express-session")({
-        secret: "2 people cannot keep a secret",
+        secret: "A new secret for a new version",
         resave: false,
         saveUninitialized: false
     }));
@@ -51,8 +51,10 @@ var Campground            = require("./models/campground"),
 
 // Seed the database with fresh data
 
-    if(refreshSeeds){seedDB()}
-    
+    if(reseedDatabase){seedDB()}
+
+
+
 //=========//
 // Routes! //
 //=========//
