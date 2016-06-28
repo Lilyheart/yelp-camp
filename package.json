@@ -1,6 +1,6 @@
 {
   "name": "v1",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "YelpCamp",
   "main": "app.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "ejs": "^2.4.2",
     "express": "^4.14.0",
     "express-session": "^1.13.0",
+    "method-override": "^2.3.6",
     "mongoose": "^4.5.2",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",

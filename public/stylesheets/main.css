@@ -1,3 +1,30 @@
+html, body {
+  height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -55px; 
+  padding-bottom: 20px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+#footer, .page-wrap:after {
+  height: 55px; 
+}
+
+#footer {
+  background: #e7e7e7;
+}
+
+#footer .container {
+    padding-top: 15px;
+}
+
 .thumbnail {
     padding: 0;
 }

@@ -7,6 +7,7 @@ var reseedDatabase = false;
 var express               = require("express"),
     bodyParser            = require("body-parser"),
     mongoose              = require("mongoose"),
+    methodOverride        = require("method-override"),
     passport              = require("passport"),
     LocalStrategy         = require("passport-local"),
     passportLocalMongoose = require("passport-local-mongoose");
@@ -23,6 +24,7 @@ var Campground            = require("./models/campground"),
 //Misc Setups
 
     app.use(express.static(__dirname + "/public"));
+    app.use(methodOverride("_method"));
     app.set("view engine", "ejs");
     
     app.use(bodyParser.urlencoded({extended: true}));
@@ -61,7 +63,7 @@ var Campground            = require("./models/campground"),
 
 app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
-app.use("/campgrounds/:id/comments", commentRoutes);
+app.use("/campgrounds/:campground_id/comments", commentRoutes);
 
 
 
