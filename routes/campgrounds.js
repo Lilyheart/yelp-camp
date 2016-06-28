@@ -24,7 +24,15 @@ var Campground = require("../models/campground");
 // Campground CREATE
     
     router.post("/", isLoggedIn, function(req, res){
-        Campground.create(req.body.campground, function(err, newlyCreated){
+        var name = req.body.name;
+        var image = req.body.image;
+        var desc = req.body.description;
+        var author = {
+            id: req.user._id,
+            username: req.user.username
+        };
+        var newCampground = {name: name, image: image, description: desc, author:author};
+        Campground.create(newCampground, function(err, newlyCreated){
             if (err) {
                 console.log(err);
             } else {
@@ -32,6 +40,9 @@ var Campground = require("../models/campground");
             }
         });
     });
+    
+    
+                        
     
 // Campground SHOW
     

@@ -62,41 +62,41 @@ function seedDB(){
                 if (err) {
                     console.log(err);
                 } else {
-                    campgroundData.forEach(function(seed, thisArg){
-                        Campground.create(seed, function(err, campgroundResponse){
-                            if (err) {
-                                console.log(err);
-                            } else {
-                                // Comment.create(commentData1[thisArg], function(err, comment){
-                                //     if (err) {
-                                //         console.log(err);
-                                //     } else {
-                                //         campgroundResponse.comments.push(comment);
-                                //     }
-                                // });
-                                // Comment.create(commentData2[thisArg], function(err, comment2){
-                                //     if (err) {
-                                //         console.log(err);
-                                //     } else {
-                                //         campgroundResponse.comments.push(comment2);
-                                //         campgroundResponse.save();
-                                //     }
-                                // });
-                            }
-                        });
-                        console.log("Added campground");
-                    });
+                    // campgroundData.forEach(function(seed, thisArg){
+                    //     Campground.create(seed, function(err, campgroundResponse){
+                    //         if (err) {
+                    //             console.log(err);
+                    //         } else {
+                    //             // Comment.create(commentData1[thisArg], function(err, comment){
+                    //             //     if (err) {
+                    //             //         console.log(err);
+                    //             //     } else {
+                    //             //         campgroundResponse.comments.push(comment);
+                    //             //     }
+                    //             // });
+                    //             // Comment.create(commentData2[thisArg], function(err, comment2){
+                    //             //     if (err) {
+                    //             //         console.log(err);
+                    //             //     } else {
+                    //             //         campgroundResponse.comments.push(comment2);
+                    //             //         campgroundResponse.save();
+                    //             //     }
+                    //             // });
+                    //         }
+                    //     });
+                    //     console.log("Added campground");
+                    // });
                 }
             });
         }
     });
-    User.remove({}, function(err, response){
-        if (err) {
-            console.log(err);
-        } else {
-            console.log("User database cleared")
-        }
-    });
+    // User.remove({}, function(err, response){
+    //     if (err) {
+    //         console.log(err);
+    //     } else {
+    //         console.log("User database cleared")
+    //     }
+    // });
 
 }
 
