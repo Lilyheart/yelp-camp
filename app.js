@@ -30,12 +30,16 @@ var Campground            = require("./models/campground"),
     app.use(flash());
     app.set("view engine", "ejs");
     
-    mongoose.connect(process.env.DATABASEURL);
+    //Backup variables in the event of environment variable issues.  See README.md
+    var databaseURL = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+    var sessionSecret = process.env.SESSION_SECRET || "This is a backup secret that hopefully will not be used";
+    
+    mongoose.connect(databaseURL);
     
 // Passport Setups
 
     app.use(require("express-session")({
-        secret: process.env.SESSION_SECRET,
+        secret: sessionSecret,
         resave: false,
         saveUninitialized: false
     }));
