@@ -30,17 +30,16 @@ var Campground            = require("./models/campground"),
     app.use(flash());
     app.set("view engine", "ejs");
     
-    
-    mongoose.connect("mongodb://localhost/yelp_camp");
+    mongoose.connect(process.env.DATABASEURL);
     
 // Passport Setups
 
     app.use(require("express-session")({
-        secret: "It's about time",
+        secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false
     }));
-    
+
     app.use(passport.initialize());
     app.use(passport.session());
     
