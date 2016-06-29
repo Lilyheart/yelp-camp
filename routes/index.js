@@ -39,7 +39,8 @@ var User     = require("../models/user");
     
     router.post("/login", passport.authenticate("local", {
         successRedirect: "/campgrounds",
-        failureRedirect: "/login"
+        failureRedirect: "/login",
+        failureFlash: true
     }), function(req, res){});
     
     router.get("/logout", function(req, res){

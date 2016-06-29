@@ -36,7 +36,7 @@ var Campground            = require("./models/campground"),
 // Passport Setups
 
     app.use(require("express-session")({
-        secret: "A new secret for a new version",
+        secret: "It's about time",
         resave: false,
         saveUninitialized: false
     }));
