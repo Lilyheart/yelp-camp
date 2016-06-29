@@ -1,21 +1,19 @@
 <% include partials/header %>
 
     <div class="container">
-        <div class="row">
-            <h1 class="jumbotron">Sign-up form</h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/register" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="username" name="username">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="password" placeholder="password" name="password">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-large btn-primary btn-block" >Register!</button>
-                    </div>
-                </form>
-            </div>
+        <h1 class="jumbotron">Sign-up form</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="username" name="username">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" placeholder="password" name="password">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-large btn-primary btn-block" >Register!</button>
+                </div>
+            </form>
         </div>
     </div>
     

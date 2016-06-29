@@ -1,6 +1,6 @@
 {
   "name": "v1",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "YelpCamp",
   "main": "app.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
     "ejs": "^2.4.2",
     "express": "^4.14.0",
     "express-session": "^1.13.0",
