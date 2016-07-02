@@ -20,7 +20,7 @@ export SESSION_SECRET=Whatever phrase you choose
 
 Update the variables as follows:
 
-**DATABASEURL** 'mongodb://\<dbuser>:\<dbpassword>@1234.mlab.<span></span>com:19990/yelp-camp'
+**DATABASEURL** 'mongodb://\<dbuser>:\<dbpassword>@1234.mlab.<span></span>com:19990/yelp-camp'  
 **SESSION_SECRET** 'Whatever phrase you choose'
 
 
